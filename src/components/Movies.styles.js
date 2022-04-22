@@ -13,6 +13,7 @@ export const MoviesTitle = styled.h2`
       font-bold
       uppercase
       mx-8
+      mt-10
     `}
 `;
 
@@ -20,7 +21,7 @@ export const MoviesRow = styled.div`
   ${tw`
       flex
       overflow-x-auto
-      mt-4
+      mt-0
       p-4
     `}
   &::-webkit-scrollbar {

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Movies from './components/Movies';
 import Hero from './components/Hero';
+import Header from './components/Header';
 
 const URL = 'https://api.themoviedb.org/3';
 const API_KEY = '20147a1534ba357ca36b05b79d848ac3';
@@ -75,7 +76,7 @@ function App() {
 
   return (
     <div>
-      <h1>Netflix Clone!</h1>
+      <Header />
       <Hero movie={trending[Math.floor(Math.random() * originals.length)]} />
       <Movies title="Netflix originals" movies={originals} />
       <Movies title="Trending" movies={trending} />
