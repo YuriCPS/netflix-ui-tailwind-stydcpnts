@@ -23,7 +23,7 @@ background-color: #111;
 export const HeaderMenu = styled.h2`
   ${tw`
     text-sm
-    font-medium
     mx-2
+    hover:font-bold
   `}
 `;
