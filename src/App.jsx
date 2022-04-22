@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Movies from './components/Movies';
 
 const URL = 'https://api.themoviedb.org/3';
 const API_KEY = '20147a1534ba357ca36b05b79d848ac3';
@@ -71,16 +72,15 @@ function App() {
       .then((res) => setUpcoming(res.data.results));
   }, []);
 
-  console.log(originals);
-  console.log(popular);
-  console.log(nowPlaying);
-  console.log(trending);
-  console.log(topRated);
-  console.log(upcoming);
-
   return (
     <div>
       <h1>Netflix Clone!</h1>
+      <Movies title="Netflix originals" movies={originals} />
+      <Movies title="Trending" movies={trending} />
+      <Movies title="Now Playing" movies={nowPlaying} />
+      <Movies title="Popular" movies={popular} />
+      <Movies title="Top Rated" movies={topRated} />
+      <Movies title="Upcoming" movies={upcoming} />
     </div>
   );
 }
