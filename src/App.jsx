@@ -3,6 +3,7 @@ import axios from 'axios';
 import Movies from './components/Movies';
 import Hero from './components/Hero';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 const URL = 'https://api.themoviedb.org/3';
 const API_KEY = '20147a1534ba357ca36b05b79d848ac3';
@@ -84,6 +85,7 @@ function App() {
       <Movies title="Popular" movies={popular} />
       <Movies title="Top Rated" movies={topRated} />
       <Movies title="Upcoming" movies={upcoming} />
+      <Footer />
     </div>
   );
 }
